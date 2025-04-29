@@ -22,22 +22,24 @@ public class calculadora {
 		in.close();
 		
 		float resultado = 0;
-		
-		if (operacao == '+') {
+
+		switch (operacao) {
+		case '+':
 			resultado = num1 + num2;
-		}
-		else if (operacao == '-') {
+			break;
+		case '-':
 			resultado = num1 - num2;
-		}
-		else if (operacao == '*') {
+			break;
+		case '*':
 			resultado = num1 * num2;
-		}
-		else if (operacao == '/') {
+			break;
+		case '/':
 			resultado = num1 / num2;
-		}
-		else {
+			break;
+		default:
 			System.out.print("Operação inválida. Por favor, insira apenas as operações: '+', '-', '*' ou '/'");
 		}
+		
 		
 		if (resultado > 0) {
 			System.out.printf("%d %s %d = %f", num1, operacao, num2, resultado);
